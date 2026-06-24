@@ -1,15 +1,14 @@
-# answer1.py
-
+# lib_datababse.py
+# - exam2
+# robert.jiranek@gmail.com
+#
 import sys
-from multiprocessing.reduction import duplicate
 
 import psycopg2
 from psycopg2.errors import DuplicateDatabase
 from psycopg2.extras import RealDictCursor
 import logging
 # my librares
-
-
 
 class database():
     def __init__(self):
@@ -151,42 +150,3 @@ class database():
 
         except Exception as err:
             self.sys_message ("Error",err, 91)
-"""
-database_connect={
-        "host":"192.168.56.1",
-        "port":"5432",
-        "username":"cassiopeia",
-        "userpwd":"central"
-        }
-"""
-
-database_connect_postgres={
-        "database": "postgres",
-        "host":"192.168.56.1",
-        "port":"5432",
-        "username":"cassiopeia",
-        "userpwd":"central"
-        }
-
-database_connect_exam2={
-        "database": "exam2",
-        "host":"192.168.56.1",
-        "port":"5432",
-        "username":"cassiopeia",
-        "userpwd":"central"
-        }
-
-try:
-    examdb=database()
-    examdb.connect(connect_string=database_connect_postgres)
-    examdb.sys_database_info(onscreen = True)
-    # examdb.create_database("exam2222")
-    # examdb.drop_database("exam22")
-    examdb.close()
-
-    examdb.connect(connect_string=database_connect_exam2)
-    examdb.sys_database_info(onscreen = True)
-    examdb.close()
-
-except Exception as err:
-    print(f"{68*"_"}\nERROR\n {err}\n{68*"_"}")
