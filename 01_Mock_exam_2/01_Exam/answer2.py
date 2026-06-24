@@ -1,5 +1,9 @@
+# answer2.py
+# - exam2
+# robert.jiranek@gmail.com
+#
 """
-* Users: 
+* Users:
     id : autonumbered (primary key),
     name : varchar(60),
     email : varchar(60),

@@ -8,3 +8,7 @@ Mělo by uživatele informovat, pokud taková databáze již existuje.
 answer1.py
 
 start 19:48
+
+Úkol 3 (3 body)
+Napište generátor s názvem dividers, který přijímá jeden argument: number.
+Generátor by měl generovat po sobě jdoucí dělitele čísla předaného jako argument.
