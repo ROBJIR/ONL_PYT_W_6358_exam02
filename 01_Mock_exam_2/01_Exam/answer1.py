@@ -21,10 +21,24 @@ database_connect_exam2={
         "userpwd":"central"
         }
 
+database_connect_exam02={
+        "database": "exam2",
+        "host":"192.168.56.1",
+        "port":"5432",
+        "username":"robert",
+        "userpwd":"central"
+        }
+
 try:
     # creating datababse exam2
     examdb=database()
     examdb.connect(connect_string=database_connect_postgres)
+    examdb.sys_database_info(onscreen = True)
+    # examdb.create_database("exam2")
+    # examdb.drop_database("exam2")
+    examdb.close()
+
+    examdb.connect(connect_string=database_connect_exam02)
     examdb.sys_database_info(onscreen = True)
     # examdb.create_database("exam2")
     # examdb.drop_database("exam2")
