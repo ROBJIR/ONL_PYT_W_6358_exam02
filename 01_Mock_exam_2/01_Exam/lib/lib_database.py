@@ -24,20 +24,20 @@ class database():
         if messageno > 0:
             msgno = (f" [{str(messageno)}]")
         sepchar = ""
-        msg = (f"{68 * sepchar}\n{messagetype}:{msgno} {message}\n{88 * sepchar}")
+        msg = (f"{98 * sepchar}\n{messagetype}:{msgno} {message}\n{98 * sepchar}")
         match messagetype:
             case "ERROR":
                 sepchar = "="
-                msg = (f"{88 * sepchar}\n{messagetype}:{msgno} \n{message}\n{88 * sepchar}")
+                msg = (f"{98 * sepchar}\n{messagetype}:{msgno} \n{message}\n{98 * sepchar}")
             case "WARNING":
                 sepchar = "="
-                msg = (f"{88 * sepchar}\n{messagetype}:{msgno} {message}\n{88 * sepchar}")
+                msg = (f"{98 * sepchar}\n{messagetype}:{msgno} {message}\n{98 * sepchar}")
             case "INFO":
                 sepchar = "-"
-                msg = (f"{88 * sepchar}\n{messagetype}:{msgno} {message}\n{88 * sepchar}")
+                msg = (f"{98 * sepchar}\n{messagetype}:{msgno} {message}\n{98 * sepchar}")
             case "SYSINFO":
                 sepchar = "_"
-                msg = (f"{98 * sepchar}\n{msgno} {message}")
+                msg = (f"--- sysinfo {86 * sepchar}\n{msgno} {message}")
             case _:
                 msg = (f">>> {messagetype}:{msgno} {message} <<<")
         print(msg)
