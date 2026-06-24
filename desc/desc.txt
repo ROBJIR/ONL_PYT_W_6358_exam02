@@ -1,0 +1,10 @@
+Úkol 1 (3 body)
+Napište skript (program) v Pythonu, který vytvoří databázi.
+
+Mělo by to vytvořit databázi s názvem exam2.
+Mělo by být odolné vůči chybám připojení.
+Mělo by uživatele informovat, pokud taková databáze již existuje.
+
+answer1.py
+
+start 19:48
