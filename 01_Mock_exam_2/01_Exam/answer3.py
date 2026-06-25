@@ -3,10 +3,11 @@
 # robert.jiranek@gmail.com
 
 def dividers(number: int):
-    divs=[]
-    for i in range(1, number + 1):
+    for i in range(1, ( number // 2 ) +1 ):
         if number % i == 0:
             yield i    # generator
+    yield number
 
-for i in dividers(12):
-    print(i)
+if __name__ == '__main__':
+    for i in dividers(33):
+       print(i)

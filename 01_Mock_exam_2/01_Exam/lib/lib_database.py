@@ -98,10 +98,10 @@ class database():
                     dict(zip(columns, row))
                     for row in cur.fetchall()
                 ]
-
-            cur.close()
-
-            return sqlresponse
+                cur.close()
+                return sqlresponse
+            else:
+                return True
 
         except Exception as err:
             self.sys_message ("Error",err, 90)
