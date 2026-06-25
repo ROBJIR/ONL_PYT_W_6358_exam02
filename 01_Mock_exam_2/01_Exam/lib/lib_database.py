@@ -10,7 +10,7 @@ from psycopg2.extras import RealDictCursor
 import logging
 # my librares
 
-class database():
+class DatabasePostgresql():
     def __init__(self):
         self.database_name=""
         self.database_host=""
@@ -53,14 +53,6 @@ class database():
             self.database_username=connect_string["username"]
             self.database_userpwd=connect_string["userpwd"]
             self.database_name = connect_string["database"]
-            """
-            print (connect_string)
-            print(self.database_host)
-            print(self.database_port)
-            print(self.database_username)
-            print(self.database_userpwd)
-            print(self.database_name)
-            """
 
             self.conn = psycopg2.connect(
                 host=self.database_host,

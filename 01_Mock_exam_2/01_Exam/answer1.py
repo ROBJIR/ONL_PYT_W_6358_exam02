@@ -31,7 +31,7 @@ database_connect_exam02={
 
 try:
     # creating datababse exam2
-    examdb=database()
+    examdb=DatabasePostgresql()
     examdb.connect(connect_string=database_connect_postgres)
     examdb.sys_database_info(onscreen = True)
     # examdb.create_database("exam2")

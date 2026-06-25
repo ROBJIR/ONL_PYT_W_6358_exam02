@@ -92,5 +92,5 @@ ORDER BY name, email
 """
 query_10 = """
 ALTER TABLE messages
-   ADD date_of_created date DEFAULT current_date
+   ADD date_of_created timestamp DEFAULT current_timestamp
 """
